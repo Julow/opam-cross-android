@@ -1,0 +1,26 @@
+opam-version: "1.2"
+maintainer: "frederic.bour@lakaban.net"
+authors: [
+  "Frédéric Bour <frederic.bour@lakaban.net>"
+  "Jérémie Dimino <jeremie@dimino.org>"
+]
+license: "LGPL-2.1"
+homepage: "https://github.com/ocaml-ppx/ocaml-migrate-parsetree"
+bug-reports: "https://github.com/ocaml-ppx/ocaml-migrate-parsetree/issues"
+dev-repo: "git://github.com/ocaml-ppx/ocaml-migrate-parsetree.git"
+tags: [ "syntax" "org:ocamllabs" ]
+build: [
+  ["jbuilder" "build" "-p" "ocaml-migrate-parsetree" "-j" jobs]
+]
+install: [
+  ["opam" "installer" "--prefix=%{prefix}%/android-sysroot" "ocaml-migrate-parsetree.install"]
+]
+remove: [
+  ["ocamlfind" "-toolchain" "android" "remove" "ocaml-migrate-parsetree"]
+]
+depends: [
+  "result-android"
+  "ocamlfind" {build}
+  "jbuilder" {build & >= "1.0+beta18.1"}
+]
+available: ocaml-version >= "4.02.0"
