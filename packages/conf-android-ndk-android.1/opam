@@ -1,0 +1,6 @@
+opam-version: "1"
+maintainer: "Julow"
+install: [
+  [ "sh" "-c" "[ -d \"$ANDROID_NDK\" ] && ln -sf \"$ANDROID_NDK\" \"%{prefix}%/android-ndk\"" ]
+]
+remove: [[ "rm" "-f" "%{prefix}%/android-ndk" ]]

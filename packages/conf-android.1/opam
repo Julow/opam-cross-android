@@ -12,5 +12,5 @@ build: [
   ["sh" "-c" "echo \"ldflags: \\\"--sysroot %{prefix}%/android-ndk/platforms/android-${LEVEL}/arch-${CCARCH} -L%{prefix}%/android-ndk/lib -L%{prefix}%/android-ndk/sources/cxx-stl/gnu-libstdc++/${STLVER}/libs/${STLARCH} -L%{prefix}%/android-sysroot/lib\\\"\" >>conf-android.config"]
 ]
 depends: [
-  ("android-ndk-linux" {>= "11c"} | "android-ndk-darwin" {>= "11c"})
+  ("android-ndk-linux" {>= "11c"} | "android-ndk-darwin" {>= "11c"} | "conf-android-ndk-android")
 ]
