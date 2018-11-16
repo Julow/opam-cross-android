@@ -18,6 +18,7 @@ remove: [
   [ "ocamlfind" "-toolchain" "android" "remove" "lwt" ]
 ]
 depends: [
+  "ocamlbuild"
   "ocaml-android"
   "result-android"
 ]

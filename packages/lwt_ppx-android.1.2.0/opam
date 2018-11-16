@@ -14,7 +14,7 @@ license: "LGPL with OpenSSL linking exception"
 
 depends: [
   "jbuilder" {build & >= "1.0+beta14"}
-  "lwt"
+  "lwt-android"
   "ocaml-migrate-parsetree"
   "ppx_tools_versioned" {>= "5.0.1"}
 ]
